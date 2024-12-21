@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
+    <title>Mon Agenda Personnalisé</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #006233;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
         }
         .container {
             margin: 2rem auto;
-            max-width: 600px;
-            padding: 1rem;
+            max-width: 700px;
+            padding: 1.5rem;
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
         }
         h1 {
             margin-top: 0;
@@ -35,9 +46,15 @@
         .day h3 {
             background-color: #e8f5e9;
             padding: 0.5rem;
-            border-left: 4px solid #4CAF50;
+            border-left: 6px solid #006233;
             margin: 0;
             border-radius: 4px 4px 0 0;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin-bottom: 1rem;
         }
         .tasks {
             border: 1px solid #ddd;
@@ -54,7 +71,18 @@
         }
         .task .time {
             font-weight: bold;
-            color: #4CAF50;
+            color: #006233;
+        }
+        .checklist {
+            margin-top: 1.5rem;
+        }
+        .checklist label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .checklist input {
+            margin-right: 0.5rem;
         }
         footer {
             text-align: center;
@@ -65,7 +93,8 @@
 </head>
 <body>
     <header>
-        <h1>Mon Agenda</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg" alt="Drapeau de l'Algérie">
+        <h1>Mon Agenda Personnalisé</h1>
     </header>
     <div class="container">
         <h2>Semaine du 23 au 27 décembre</h2>
@@ -75,40 +104,107 @@
             <div class="tasks">
                 <div class="task">
                     <p><span class="time">9h - 9h15</span> : Chapitre 1 (Test Moodle)</p>
-                    <p>Tu feras 10 tests minimums</p>
+                    <p>Tu feras 10 tests minimum. Bonne chance ! 💪</p>
                 </div>
                 <div class="task">
                     <p><span class="time">9h15 - 9h45</span> : Chapitre 2 (Test Moodle)</p>
-                    <p>Tu feras 10 tests minimums</p>
+                    <p>Tu feras 10 tests minimum. N'oublie pas de rester concentré. ✨</p>
                 </div>
                 <div class="task">
                     <p><span class="time">9h45 - 10h</span> : Pause</p>
+                    <p>Profite de ce moment pour te détendre et boire un verre d'eau. 🌟</p>
                 </div>
                 <div class="task">
                     <p><span class="time">10h - 10h20</span> : Chapitre 3 (Test Moodle)</p>
-                    <p>Tu feras 10 tests minimums</p>
+                    <p>Tu feras 10 tests minimum. Tu progresses bien, continue comme ça ! 🚀</p>
                 </div>
                 <div class="task">
-                    <p><span class="time">10h20 - 11h20</span> : Chapitre 4 (Test Moodle)</p>
-                    <p>Test d'entraînement sur le cours : Tu feras minimum 5 tests</p>
-                </div>
-                <div class="task">
-                    <p><span class="time">11h20 - 12h</span> : Exercices d'entraînement</p>
+                    <p><span class="time">10h20 - 12h</span> : Chapitre 4 (Test Moodle)</p>
+                    <p>Test d'entraînement sur le cours : Tu feras minimum 5 tests.</p>
                     <ul>
-                        <li>01 - Binaires et décimaux : Tu feras minimum 5 tests</li>
-                        <li>02 - Classes d'adresses : Tu feras minimum 5 tests</li>
+                        <li>01 - Exercices d'entraînement binaires décimal : Tu feras minimum 5 tests.</li>
+                        <li>02 - Exercices d'entraînement sur les classes d'adresses : Tu feras minimum 5 épreuves.</li>
+                        <li>03 - Exercices d'entraînement sur les id réseau et les id hôtes : Tu feras minimum 5 tests.</li>
+                        <li>04 - Exercices d'entraînement sur les adresses : Fais-en autant que possible !</li>
                     </ul>
-                    <p><a href="file:///C:/Users/ealiu/Downloads/Diff%C3%A9rentes%20Classe.pdf" target="_blank">Explication (Le PDF sera ici)</a></p>
                 </div>
+                <div class="task">
+                    <p><strong>Fin de révision pour aujourd'hui</strong></p>
+                    <p>Bravo pour tes efforts, prends soin de toi et repose-toi bien ! 🌈</p>
+                </div>
+            </div>
+            <div class="checklist">
+                <h4>Checklist des chapitres</h4>
+                <label><input type="checkbox"> Chapitre 1 réussi</label>
+                <label><input type="checkbox"> Chapitre 2 réussi</label>
+                <label><input type="checkbox"> Chapitre 3 réussi</label>
+                <label><input type="checkbox"> Chapitre 4 réussi</label>
             </div>
         </div>
 
-        <!-- Ajoute d'autres jours ici -->
+        <div class="day">
+            <h3>Mardi 24 décembre</h3>
+            <div class="subtitle">Aujourd'hui ça sera une journée de révision avec un chapitre en plus !</div>
+            <div class="tasks">
+                <div class="task">
+                    <p><span class="time">9h - 9h15</span> : Chapitre 1 (Test Moodle)</p>
+                    <p>Tu feras 10 tests minimum. Donne le meilleur de toi-même ! 🌟</p>
+                </div>
+                <div class="task">
+                    <p><span class="time">9h15 - 9h45</span> : Chapitre 2 (Test Moodle)</p>
+                    <p>Tu feras 10 tests minimum. Respire profondément et reste zen. 🙌</p>
+                </div>
+                <div class="task">
+                    <p><span class="time">9h45 - 10h</span> : Pause</p>
+                    <p>Un bon moment pour te recentrer et te préparer pour la suite. ☕</p>
+                </div>
+                <div class="task">
+                    <p><span class="time">10h - 10h20</span> : Chapitre 3 (Test Moodle)</p>
+                    <p>Tu feras 10 tests minimum. Pense à te féliciter pour chaque succès ! 🎉</p>
+                </div>
+                <div class="task">
+                    <p><span class="time">10h20 - 12h</span> : Chapitre 4 (Test Moodle)</p>
+                    <p>Test d'entraînement sur le cours : Tu feras minimum 5 tests.</p>
+                    <ul>
+                        <li>01 - Exercices d'entraînement binaires décimal : Tu feras minimum 5 tests.</li>
+                        <li>02 - Exercices d'entraînement sur les classes d'adresses : Tu feras minimum 5 épreuves.</li>
+                        <li>03 - Exercices d'entraînement sur les id réseau et les id hôtes : Tu feras minimum 5 tests.</li>
+                        <li>04 - Exercices d'entraînement sur les adresses : Donne tout ce que tu peux !</li>
+                    </ul>
+                </div>
+                <div class="task">
+                    <p><span class="time">12h - 14h</span> : Pause</p>
+                    <p>Prends un bon déjeuner pour recharger tes batteries. 🍴</p>
+                </div>
+                <div class="task">
+                    <p><span class="time">14h - 15h</span> : Chapitre 5 (Test Moodle)</p>
+                    <p>Tu feras un minimum de 10 tests. Dernière ligne droite, ne lâche rien ! 💥</p>
+                </div>
+                <div class="task">
+                    <p><strong>Fin de révision pour aujourd'hui</strong></p>
+                    <p>Tu as été incroyable aujourd'hui, bravo ! 🎉</p>
+                </div>
+            </div>
+            <div class="checklist">
+                <h4>Checklist des chapitres</h4>
+                <label><input type="checkbox"> Chapitre 1 réussi</label>
+                <label><input type="checkbox"> Chapitre 2 réussi</label>
+                <label><input type="checkbox"> Chapitre 3 réussi</label>
+                <label><input type="checkbox"> Chapitre 4 réussi</label>
+                <label><input type="checkbox"> Chapitre 5 réussi</label>
+            </div>
+        </div>
+
+        <div class="day">
+            <h3>Du mercredi 25 au vendredi 27 décembre</h3>
+            <div class="tasks">
+                <p>Cette période sera dédiée à la création de machines. Pas d'horaires fixes, mais donne le meilleur de toi-même selon le temps nécessaire pour chaque paramétrage. 💻</p>
+            </div>
+        </div>
 
     </div>
     <footer>
-        <p>Agenda partagé - Créé avec ❤️</p>
+        <p>Agenda partagé - Créé avec ❤️ et beaucoup d'efforts ! 🇩🇿</p>
     </footer>
 </body>
 </html>
- 
